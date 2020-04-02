@@ -1,12 +1,14 @@
 ## SZMC v1 spec
 
-지금 당장 필요한 것은 아니지만 미래에 추가하면 좋겠다 싶은 기능, 혹은 중요도가 낮은 기능은
-<sub>작은 글자로 표시합니다.</sub>
-스펙은 목표(What)에 해당하는 [작업-과정](#작업-과정), 해결방법(How)에 해당하는 [앱](#앱)으로 구성됩니다.
+스펙은 목표(What)에 해당하는 [작업-과정](#작업-과정), 해결방법(How)에 해당하는 [앱](#앱)으로 구성됩니다. 
+
+지금 당장 필요한 것은 아니지만 미래에 추가하면 좋겠다 싶은 기능, 혹은 중요도가 낮은 기능은 <sub>작은 글자로 표시합니다.</sub> \
+
 
 # 작업-과정
 
 [`create-manga-project`](#create-manga-project) => [`edit-mask`](#edit-mask) => [`remove-text`](#edit-mask) => [`export-manga-project`](#export-manga-project)
+
 
 ## create-manga-project
 사용자는 이미지 파일(들)을 불러와서 manga-project를 생성할 수 있습니다. \
@@ -21,31 +23,38 @@
 - 원본: manga-image는 원본 이미지입니다. png, jpg를 기본적으로 지원합니다. (그 외에는 일단 무시)
 - 버전관리1: manga-image의 변경 사항은 모두 저장되어야 합니다. (v1에서 manga-image를 변화시키는 방법은 딥러닝을 이용하는 방법 뿐입니다.)
 - 버전관리2: 사용자는 manga-image의 특정 버전을 가져와서 편집할 수 있습니다.
+- 영속적버전관리: manga-image의 버전들을 영속적으로 저장할 수 있습니다
 ##### manga-mask
 - 지울 영역 표시: manga-mask는 manga-image에서 [텍스트를 지워야하는 영역(rm-area)](#rm-area)을 픽셀 단위로 표시합니다. 최초에는 투명한 빈 이미지입니다.
 - 마스크: manga-mask는 투명한 빈 이미지 위에 빨간색(#FF0000)으로 [rm-area](#rm-area)를 표시합니다.
+- 버전관리1: manga-mask의 변경 사항은 모두 저장되어야 합니다.
+- 버전관리2: 사용자는 manga-manga의 특정 버전을 가져와서 편집할 수 있습니다. (undo/redo)
+- <sub> 영속적버전관리: manga-mask의 버전들을 영속적으로 저장할 수 있습니다(구현하지 않을 수도 있음) </sub>
 ##### rm-area
 - manga-mask에서 텍스트를 지워야하는 영역입니다. 
 
 
 ## edit-mask
 사용자는 [manga-project](#manga-project)의 [manga-mask](#manga-mask)를 [editor](#editor)에 로드하여 편집할 수 있습니다.
-
 - draw: 사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 그릴(넓힐) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
 - erase: 사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 지울(줄일) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
-- nn-gen: 사용자는 manga-mask를 자동으로 생성할 수 있습니다.
+- auto-gen: 사용자는 manga-mask를 자동으로 생성할 수 있습니다.
+- auto-gen-many: 사용자는 선택한 프로젝트 혹은 이미지들의 manga-mask를 자동으로 생성할 수 있습니다.
 
 ## remove-text
-사용자는 [rm-area](#rm-area)가 표시하는 [manga-image](#manga-image) 영역을 자연스럽게 지울 수 있습니다.
+- rm-txt: 사용자는 [rm-area](#rm-area)가 표시하는 [manga-image](#manga-image) 영역을 자연스럽게 지울 수 있습니다.
+- rm-txt-many: 사용자는 선택한 프로젝트 혹은 이미지들의 rm-area를 자연스럽게 지울 수 있습니다.
 
 ## export-manga-project
-사용자는 [manga-project]를 다운로드받을 수 있습니다.
+사용자는 [manga-project]를 다운로드 받을 수 있습니다.
 
 # 앱
 # GUI
 [작업-과정](#작업-과정) 을 구현하기 위한 GUI입니다.
 ## menu-bar
+- new manga project 버튼: 열기 버튼을 눌러 대화 상자를 열고, 작업할 이미지 파일(들) 혹은 폴더를 선택하고, manga-project의 이름을 입력받아 프로젝트를 생성할 수 있습니다. 생성된 만화 프로젝트는 explorer에서 
 ## explorer
+만화 프로젝트는 폴더로, 각 이미지는 이미지 썸네일로 표시합니다.
 ## tool-bar
 ## status-bar
 ## editor
