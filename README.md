@@ -47,31 +47,30 @@
 ## export-manga-project
 사용자는 [manga-project](#manga-project)를 다운로드 받을 수 있습니다.
 
-# 앱
-# GUI
+**---------------(WIP)---------------------**
+# 앱 
+# GUI 
 [작업-과정](#작업-과정) 을 구현하기 위한 GUI입니다.
-## menu-bar
+## tool-bar
 - new manga project 버튼: 열기 버튼을 눌러 대화 상자를 열고, 작업할 이미지 파일(들) 혹은 폴더를 선택하고, manga-project의 이름을 입력받아 프로젝트를 생성할 수 있습니다. 생성된 만화 프로젝트는 explorer에서 
 ## explorer
 만화 프로젝트는 폴더로, 각 이미지는 이미지 썸네일로 표시합니다.
 <sub>drag&drop 기능: 인터넷이나 로컬에서 이미지를 드래그앤드롭으로 추가 가능</sub>
-## tool-bar
-## status-bar
 ## editor
 - 표시: editor는 현재 선택된 manga-mask와 
 - 투명종이: 사용자는 manga-image 위에 manga-mask를 겹쳐 보면서 편집할 수 있습니다.
-- 스크롤: 사용자는 
+- 스크롤: 사용자는 이미지와 마스크를 스크롤 가능..
 
 ##### pen-tool
 - pen: 사용자는 원형의 영역을 클릭하여 마스크에 추가할 수 있습니다. (그림판, 김프, 포토샵 참조.)
 ##### rect-tool
 - rect: 사용자는 사각형의 영역을 드래그하여 마스크에 추가할 수 있습니다. (식질머신 v0 참조 https://youtu.be/-hJ_U0xz860?t=33)
-
 ##### opacity-control
 - 투명도조절: 사용자는 manga-mask의 투명도를 조절할 수 있습니다. 
 - <sub>마스크토글1: 사용자는 버튼을 눌러서 (현재 투명도) <-> (완전 투명함)을 빠르게 전환할 수 있습니다</sub>
 - <sub>마스크토글2: (완전히 투명함) 상태에서 [draw](#draw)나 [erase](#erase)작업을 할 경우 다시 (현재 투명도)로 돌아옵니다</sub>
 
+## status-bar
 
 
 만화 프로젝트에서  
