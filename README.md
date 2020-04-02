@@ -40,7 +40,7 @@
 ## remove-text
 ## export-manga-project
 
-#GUI
+# GUI
 [작업 과정](#작업 과정)을 구현하기 위한 GUI입니다.
 ## editor
 - 표시: editor는 현재 선택된 manga-mask와 
