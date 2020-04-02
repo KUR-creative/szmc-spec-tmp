@@ -36,8 +36,8 @@
 
 ## edit-mask
 사용자는 [manga-project](#manga-project)의 [manga-mask](#manga-mask)를 [editor](#editor)에 로드하여 편집할 수 있습니다.
-- draw: 사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 그릴(넓힐) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
-- erase: 사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 지울(줄일) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
+- draw: 사용자는 manga-mask에 [pen-tool](#pen-tool), [rect-tool](#rect-tool)로 [rm-area](#rm-area)를 그릴(넓힐) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
+- erase: 사용자는 manga-mask에 [pen-tool](#pen-tool), [rect-tool](#rect-tool)로 [rm-area](#rm-area)를 지울(줄일) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
 - auto-gen: 사용자는 manga-mask를 자동으로 생성할 수 있습니다.
 - auto-gen-many: 사용자는 선택한 프로젝트 혹은 이미지들의 manga-mask를 자동으로 생성할 수 있습니다.
 
