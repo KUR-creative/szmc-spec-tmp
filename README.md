@@ -12,9 +12,9 @@
 
 ## create-manga-project
 사용자는 이미지 파일(들)을 불러와서 manga-project를 생성할 수 있습니다. \
-
 ##### manga-project
-- 망가 프로젝트: manga-project는 [manga-image](#manga-image)들의 리스트와 각 이미지에 대응하는 [manga-mask](#manga-mask)들로 이루어집니다. 
+- 망가 프로젝트: manga-project는 [manga-image](#manga-image)들의 리스트와 각 이미지에 대응하는 [manga-mask](#manga-mask)들로 이루어집니다.
+- 생성: manga-project가 생성될 때 각 manga-image에 대응하는 manga-mask는 투명한 비어있는 이미지로 생성됩니다.
 - 순서 유지: manga-project의 manga-image와 manga-mask는 순서가 유지되어야 합니다.
 - 영속성: manga-project는 사용자의 디스크에 영속적으로 저장되어야 합니다.
 - Retrieval: manga-project는 브라우저를 끈 뒤 다시 식질머신을 켰을 때 로드하여 작업을 이어갈 수 있어야 합니다.
