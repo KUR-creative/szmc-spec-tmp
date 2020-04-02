@@ -4,7 +4,7 @@
 <sub>작은 글자로 표시합니다.</sub>
 
 
-# 작업 과정
+# 작업-과정
 
 [`create-manga-project`](#create-manga-project) => [`edit-mask`](#edit-mask) => [`remove-text`](#edit-mask) => [`export-manga-project`](#export-manga-project)
 
@@ -41,7 +41,7 @@
 ## export-manga-project
 
 # GUI
-[작업 과정](#작업 과정)을 구현하기 위한 GUI입니다.
+[작업 과정](#작업-과정) 을 구현하기 위한 GUI입니다.
 ## editor
 - 표시: editor는 현재 선택된 manga-mask와 
 - 투명종이: 사용자는 manga-image 위에 manga-mask를 겹쳐 보면서 편집할 수 있습니다.
