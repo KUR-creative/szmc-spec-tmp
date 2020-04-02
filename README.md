@@ -12,7 +12,6 @@
 
 ## create-manga-project
 사용자는 이미지 파일(들)을 불러와서 manga-project를 생성할 수 있습니다. \
-<sub>drag&drop 기능 - 인터넷이나 로컬에서 이미지를 드래그앤드롭으로 추가 가능</sub>
 
 ##### manga-project
 - 망가 프로젝트: manga-project는 [manga-image](#manga-image)들의 리스트와 각 이미지에 대응하는 [manga-mask](#manga-mask)들로 이루어집니다. 
@@ -46,7 +45,7 @@
 - rm-txt-many: 사용자는 선택한 프로젝트 혹은 이미지들의 rm-area를 자연스럽게 지울 수 있습니다.
 
 ## export-manga-project
-사용자는 [manga-project]를 다운로드 받을 수 있습니다.
+사용자는 [manga-project](#manga-project)를 다운로드 받을 수 있습니다.
 
 # 앱
 # GUI
@@ -55,6 +54,7 @@
 - new manga project 버튼: 열기 버튼을 눌러 대화 상자를 열고, 작업할 이미지 파일(들) 혹은 폴더를 선택하고, manga-project의 이름을 입력받아 프로젝트를 생성할 수 있습니다. 생성된 만화 프로젝트는 explorer에서 
 ## explorer
 만화 프로젝트는 폴더로, 각 이미지는 이미지 썸네일로 표시합니다.
+<sub>drag&drop 기능: 인터넷이나 로컬에서 이미지를 드래그앤드롭으로 추가 가능</sub>
 ## tool-bar
 ## status-bar
 ## editor
