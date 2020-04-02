@@ -1,12 +1,10 @@
-# szmc-spec-tmp
-
-## v1 spec
+## SZMC v1 spec
 
 지금 당장 필요한 것은 아니지만 미래에 추가하면 좋겠다 싶은 기능, 혹은 중요도가 낮은 기능은
 <sub>작은 글자로 표시합니다.</sub>
 
 
-## 작업 과정
+# 작업 과정
 
 [`create-manga-project`](#create-manga-project) => [`edit-mask`](#edit-mask) => [`remove-text`](#edit-mask) => [`export-manga-project`](#export-manga-project)
 
@@ -31,12 +29,24 @@
 
 
 ## edit-mask
-사용자는 [manga-project](#manga-project)의 [manga-mask](#manga-mask)를 화면에 로드하여 편집할 수 있습니다.
+사용자는 [manga-project](#manga-project)의 [manga-mask](#manga-mask)를 [editor](#editor)에 로드하여 편집할 수 있습니다.
 
 ##### draw
-사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 그릴(추가할) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
+사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 그릴(넓힐) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
 ##### erase
-사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 지울(제거할) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
+사용자는 manga-mask에 [pen](#pen-tool), [rect](#rect-tool)로 [rm-area](#rm-area)를 지울(줄일) 수 있습니다. <sub>(더 많은 툴 추가 가능)</sub>
+
+
+## remove-text
+## export-manga-project
+
+#GUI
+[작업 과정](#작업 과정)을 구현하기 위한 GUI입니다.
+## editor
+- 표시: editor는 현재 선택된 manga-mask와 
+- 투명종이: 사용자는 manga-image 위에 manga-mask를 겹쳐 보면서 편집할 수 있습니다.
+- 스크롤: 사용자는 
+
 ##### pen-tool
 - pen: 사용자는 원형의 영역을 클릭하여 마스크에 추가할 수 있습니다. (그림판, 김프, 포토샵 참조.)
 ##### rect-tool
@@ -44,11 +54,9 @@
 
 ##### opacity-control
 - 투명도조절: 사용자는 manga-mask의 투명도를 조절할 수 있습니다. 
-- 투명종이: 사용자는 manga-image 위에 manga-mask를 겹쳐 보면서 편집할 수 있습니다.
 - <sub>마스크토글1: 사용자는 버튼을 눌러서 (현재 투명도) <-> (완전 투명함)을 빠르게 전환할 수 있습니다</sub>
 - <sub>마스크토글2: (완전히 투명함) 상태에서 [draw](#draw)나 [erase](#erase)작업을 할 경우 다시 (현재 투명도)로 돌아옵니다</sub>
 
-## remove-text
-## export-manga-project
+
 
 만화 프로젝트에서  
